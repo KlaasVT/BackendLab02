@@ -1,0 +1,32 @@
+@url=http://localhost:5000
+GET {{url}}/locations HTTP/1.1
+###
+GET {{url}}/types HTTP/1.1
+###
+GET {{url}}/registrations HTTP/1.1
+###
+POST {{url}}/registrations HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Trump",
+    "firstName" : "Donald",
+    "email" : "donald@maga.eu",
+    "yearOfBirth" : 1952,
+    "vaccinationDate": "1/1/2022",
+    "VaccinTypeId" : "4e2a72fb-f4fa-416f-87cd-ea338b518519",
+    "VaccinationLocationId" : "2774e3d1-2b0f-47ab-b391-8ea43e6f9d80"
+}
+###
+POST {{url}}/registrations HTTP/1.1
+Content-Type: application/json
+
+{
+    "name" : "Trump",
+    "firstName" : "Donald",
+    "email" : "donald@maga.eu",
+    "yearOfBirth" : 1952,
+    "vaccinationDate": "1/1/2022",
+    "vaccinTypeId" : "Pfizer, Biontech",
+    "vaccinationLocationId" : "Kortrijk Expo"
+}
